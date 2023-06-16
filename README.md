@@ -4,7 +4,7 @@
 
 Based on the methodology in _Quantiative Risk Management_ by Thomas Coleman (Wiley, 2012)
 
-This is python code that implements the risk reports and example portfolio discussed in Section 10.6 "Risk Reporting".
+First draft of the python code to implement the risk reports and example portfolio discussed in Section 10.6 "Risk Reporting".
 
 **Table_Ch10.py**
 
