@@ -858,7 +858,8 @@ def volbySubPortfolio(seclist, holdings, settledate, subportfolio):
         for j in x1:
             xhold[j] = holdings[j]  # Insert holdings for this subportfolio
         x2 = portVolbyVCVextended(seclist, xhold, settledate, sec_master.df_sec, sec_master.df_rf, sec_master.df_market)
-        results = np.concatenate((results, x2), axis=0, dtype=object)
+        #results = np.concatenate((results, x2), axis=0, dtype=object)  # These are lists, so just use "+" to concatenate
+        results = results + x2
 
     partial = np.dot(np.array(results[11]), results[12])  # Matrix multiplication of VCV . Delta
     
