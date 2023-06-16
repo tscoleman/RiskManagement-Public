@@ -5,6 +5,10 @@ Based on the methodology in _Quantiative Risk Management_ by Thomas Coleman (Wil
 
 This is python code that implements the risk reports and example portfolio discussed in Section 10.6 "Risk Reporting".
 
+**Table_Ch10.py**
+File that runs the risk report tables for Section 10.6
+
+
 **Example Portfolio**
 + Government subportfolio
   + Long $20mn US Treasury 10-year bond
@@ -19,10 +23,6 @@ This is python code that implements the risk reports and example portfolio discu
 + Equity subportoflio
   + Long eur7mn CAC futures
   + Long eur5mn French company (France Telecom)
-
-
-**Table_Ch10.py**
-File that runs the risk report tables for Section 10.6
 
 
 **SamplePort_define.py**
