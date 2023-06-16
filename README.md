@@ -1,6 +1,7 @@
 # RiskManagement-Public
 
 **Introduction**
+
 Based on the methodology in _Quantiative Risk Management_ by Thomas Coleman (Wiley, 2012)
 
 This is python code that implements the risk reports and example portfolio discussed in Section 10.6 "Risk Reporting".
