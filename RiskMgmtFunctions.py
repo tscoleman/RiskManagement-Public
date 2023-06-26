@@ -1,7 +1,7 @@
  #Dataframe function
 ####Various Functions for Risk Management Manuscript
 
-import SamplePort_df_python_define as sec_master
+import SamplePort_define as sec_master
 
 import numpy as np
 from functools import reduce

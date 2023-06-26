@@ -1,6 +1,6 @@
 ##textbook Ch10 tables 
-import DistFn_df_python_function  as fns
-import SamplePort_df_python_define as sec_master
+import RiskMgmtFunctions  as fns
+import SamplePort_define as sec_master
 
 import numpy as np
 import math
