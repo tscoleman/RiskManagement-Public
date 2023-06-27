@@ -59,7 +59,20 @@ All the functions for calculating and displaying risk measures.
   + rfVolbyVCV -  Loop over RFs in a portfolio and calculate the vol of each RF
   + portVolbyVCV -  Calculate portfolio volatility from VCV by matrix multiplication
   + portVolbyVCVextended 
-    + the most important function, calculates all statistics such as marginal contribution
+    + the most important function, calculates all statistics such as marginal contribution, here is the output:
+      + portfolio volatility 
+      + list of marginal contributions (vector) in levels (for risk factors)
+      + marginal contributions proportional
+      + All-or-nothing contribution (change in vol when this pos'n is set to zero)
+      + Best hedge position (in same units as input holdings) - must fix because by RFs not securities
+      + Volatility at best hedge
+      + Stand-alone volatilities of individual risk factors
+      + RF list (remember that although seclist is input, risk is done by RFs
+      + DV01s by RFs per 1 unit holdings
+      + Correlations of RFs with portfolio
+      + Replicating position (= original - best hedge)
+      + DV01s by RFs (actual holdings)
+      + VCV matrix 
   + volbySubPortfolio - Expected Volatility by Subportfolio
   + bestReplicatePort - Build replicating portfolios for 1-5 securities
 
