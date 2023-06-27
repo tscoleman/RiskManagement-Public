@@ -77,9 +77,11 @@ All the functions for calculating and displaying risk measures.
   + bestReplicatePort - Build replicating portfolios for 1-5 securities
 
 + Table display functions
-  + reportFunction1 - Creates 3 sets of tables.
+  + reportFunction1 - Creates 5 tables, returned in a list (remember tha python indexes from 0):
     + Summary expected volatility (total and by asset class)
-    + Top 3 and bottom 1 contribution to risk
+    + Top 3 positive contributors to risk
+    + Top 1 negative contributor to risk
     + Top 3 best hedges
+    + Best replicating portfolio
   + varsumm - VOLATILITY and 1-out-of 255 VaR 
   + displayRF - Display the securities and RFs, DV01s, and Vols
