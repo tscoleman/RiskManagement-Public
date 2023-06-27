@@ -1,17 +1,17 @@
 # RiskManagement-Public
 
-**Introduction**
+## Introduction
 
 Based on the methodology in _Quantiative Risk Management_ by Thomas Coleman (Wiley, 2012)
 
 First draft of the python code to implement the risk reports and example portfolio discussed in Section 10.6 "Risk Reporting". Code by Thomas Coleman, Kunyi Du, Dana Shen.
 
-**Table_Ch10.py**
+## Table_Ch10.py
 
 File that runs the risk report tables for Section 10.6
 
 
-**Example Portfolio**
+## Example Portfolio
 + Government subportfolio
   + Long $20mn US Treasury 10-year bond
   + Lond £25mn U.K. Gile 10-year
@@ -27,7 +27,7 @@ File that runs the risk report tables for Section 10.6
   + Long eur5mn French company (France Telecom)
 
 
-**SamplePort_define.py**
+## SamplePort_define.py
 
 Defines the dataframes for the example portfolio
 + df_sec - Defines the securities, basically the "Securities Master"
@@ -37,7 +37,7 @@ Defines the dataframes for the example portfolio
 + df-market - market data
 + corrmatrix and marketVols - the elements of the variance-covariance matrix for historical risk factors, as of a date in 2011
 
-**RiskMgmtFunctions.py**
+## RiskMgmtFunctions.py
 
 All the functions for calculating and displaying risk measures. 
 + Full list to be added
