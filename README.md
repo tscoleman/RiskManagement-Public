@@ -40,4 +40,32 @@ Defines the dataframes for the example portfolio
 ## RiskMgmtFunctions.py
 
 All the functions for calculating and displaying risk measures. 
-+ Full list to be added
+
++ PV functions for each security - defined as PV[inputs, settledate, holding, parms]. input is things like yield, forward curve, FX rates, etc - the market data. holding is the holding. parms is parameters such as coupon or maturity date.
+  +   bondpv, bondoptionpv, swappv, eqtyFutpv, simpCDSpv, eqtypv, cashpv, swappvactual
+
++ dv01 functions
+  + dv01posn - Calculate DV01 (sensitivity) to a risk factor
+  + populateSecDV01s - Populates a 3 x n array with the first row being the list of securities, the second row the list of risk factors (maybe multiple per security), and the third the values.
+  + populatePortDV01s - Populates a 2 x n array with the first row being the list of risk factors and the second row the values of the DV01s. 
+  + populateEqvDV01s - Populates the same array with populatePortDV01s, but for a unit holding of the equivalent security in its native currency.
+
++ Utility functions
+  + populateVCV - Pick out and populate a VCV matrix using a list of risk factors
+
++ Volatility functions
+  + secVolbyVCV - Loop over the securities in a portfolio and calculate the vol of each security
+  + rfVolbyVCV -  Loop over RFs in a portfolio and calculate the vol of each RF
+  + portVolbyVCV -  Calculate portfolio volatility from VCV by matrix multiplication
+  + portVolbyVCVextended 
+    - the most important function, calculates all statistics such as marginal contribution
+  + volbySubPortfolio - 
+  + bestReplicatePort - 
+
++ Table display functions
+  + reportFunction1 - Creates 3 sets of tables.
+    + Summary expected volatility (total and by asset class)
+    + Top 3 and bottom 1 contribution to risk
+    + Top 3 best hedges
+  + varsumm - 
+  + displayRF - Display the securities and RFs, DV01s, and Vols
