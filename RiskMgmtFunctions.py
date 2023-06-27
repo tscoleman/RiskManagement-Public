@@ -844,7 +844,17 @@ def reportFunction1(seclist, holdings, settledate, nav):
         ["", "", "", "", "", replicateport[4][4], f"{replicateport[6][4][4]:.1f}"]
     ]
     table = [table, xx1, xx2, xx3, xx4]
-    return table
+    formatted_table = []
+    for sub_list in table:
+        formatted_sub_list = []
+        for item in sub_list:
+            if isinstance(item, list):
+                formatted_item = [f"{float(num):,}" if num.replace('.', '', 1).isdigit() else num for num in item]
+            else:
+                formatted_item = f"{float(item):,}" if item.replace('.', '', 1).isdigit() else item
+            formatted_sub_list.append(formatted_item)
+        formatted_table.append(formatted_sub_list)
+    return formatted_table
 
 def volbySubPortfolio(seclist, holdings, settledate, subportfolio):
     subportlist = list(set(subportfolio))  # List of unique asset classes

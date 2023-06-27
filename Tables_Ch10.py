@@ -73,19 +73,9 @@ displayRF
 ##Create report tables
 settledate = fns.datetime(2009, 1, 27, 0, 0, 0)
 ##nav=1 for dollar term, nav=500000 for percentage term 
-xx = fns.reportFunction1(seclist, holdings, settledate,nav=1)
+formatted_xx = fns.reportFunction1(seclist, holdings, settledate,nav=1)
 yy = fns.volbySubPortfolio(seclist, holdings, settledate, subportfolio)
 
-formatted_xx = []
-for sub_list in xx:
-    formatted_sub_list = []
-    for item in sub_list:
-        if isinstance(item, list):
-            formatted_item = [f"{float(num):,}" if num.replace('.', '', 1).isdigit() else num for num in item]
-        else:
-            formatted_item = f"{float(item):,}" if item.replace('.', '', 1).isdigit() else item
-        formatted_sub_list.append(formatted_item)
-    formatted_xx.append(formatted_sub_list)
 
 t1 = tabulate(formatted_xx[0], headers='firstrow', tablefmt='grid')
 print(t1)
