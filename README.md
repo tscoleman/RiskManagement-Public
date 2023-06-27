@@ -51,6 +51,7 @@ All the functions for calculating and displaying risk measures.
   + populateEqvDV01s - Populates the same array with populatePortDV01s, but for a unit holding of the equivalent security in its native currency.
 
 + Utility functions
+  + fxrateSec - pick out FX rate of security
   + populateVCV - Pick out and populate a VCV matrix using a list of risk factors
 
 + Volatility functions
@@ -58,14 +59,14 @@ All the functions for calculating and displaying risk measures.
   + rfVolbyVCV -  Loop over RFs in a portfolio and calculate the vol of each RF
   + portVolbyVCV -  Calculate portfolio volatility from VCV by matrix multiplication
   + portVolbyVCVextended 
-    - the most important function, calculates all statistics such as marginal contribution
-  + volbySubPortfolio - 
-  + bestReplicatePort - 
+    + the most important function, calculates all statistics such as marginal contribution
+  + volbySubPortfolio - Expected Volatility by Subportfolio
+  + bestReplicatePort - Build replicating portfolios for 1-5 securities
 
 + Table display functions
   + reportFunction1 - Creates 3 sets of tables.
     + Summary expected volatility (total and by asset class)
     + Top 3 and bottom 1 contribution to risk
     + Top 3 best hedges
-  + varsumm - 
+  + varsumm - VOLATILITY and 1-out-of 255 VaR 
   + displayRF - Display the securities and RFs, DV01s, and Vols
