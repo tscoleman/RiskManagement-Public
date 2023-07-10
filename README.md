@@ -17,7 +17,7 @@ File that runs the risk report tables for Section 10.6
   + Lond £25mn U.K. Gile 10-year
   + Short $20mn notional call option on a 5-year US Treasury
 + Swaps subportfolio
-  + Shor $20mn 10-year swap
+  + Short $20mn 10-year swap
   + Long outright $30mn US Treasury 
   + Net is long swap spreads and long some resudual US Treasury exposure
 + Credit subportfoli
