@@ -216,6 +216,10 @@ def cashpv(inputs, settledate, holding, parms):
     return holding * 1000000 / inputs[0]
 
 #Equity PV functions
+#Equity pv is just the holding times the beta converted to base currency. inputs contains the equity index and the FX rate. The holding is assumed to be in millions (20 means 20mn) so must multiply by 1,000,000
+#Equity and futures are calculated as beta-equivalent. The inputs are the index levels (which should be 1 if holding is to be in millions of currency units) and the parameters are the betas. The formula will then be
+#	holding * 100 000 * Product[ Subsuperscript[I, i, \[Beta]i] ]
+#The index levels and the parameters should be lists (may be single-element lists)
 #inputs contains the equity index and the FX rate.
 def eqtypv(inputs, settledate, holding, parms):
     """Inputs are [Index Level, FX rate]"""
@@ -244,6 +248,7 @@ def eqtyFutpv(inputs, settledate, holding, parms):
 #    return inputs[0] * holding * 1000000 * parms[0] / next(x for x, y in zip(sec_master.marketDataValues, sec_master.marketDataNames) if y == parms[-1] + "FX")
 
 #Futures PV functions
+#PV for a futures. Input is simply the futures price, the parms are {contract size, currency}. Value is futures price * contract size / FX
 def futpv(inputs, settledate, holding, parms):
     """Inputs = [Future Price],Parms = [Contract size, Currency]"""
     return inputs[0] * holding * 1000000 * parms[0] / next(

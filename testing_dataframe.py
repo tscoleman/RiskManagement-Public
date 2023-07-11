@@ -1,5 +1,5 @@
-import SamplePort_df_python_define as sec_master
-import DistFn_df_python_function  as fns
+import RiskMgmtFunctions as sec_master
+import SamplePort_define  as fns
 #%% Start testing date functions
 
 #print(contents)
